@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     private void initView() {
         progress = new ProgressDialog(this);
         progress.setMessage("加载中...");
+        progress.setCancelable(false);
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -139,6 +140,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                     } else {
                         showEmptyView();
                     }
+                } else {
+                    showEmptyView();
                 }
             }
 
@@ -162,6 +165,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                     } else {
                         showEmptyView();
                     }
+                } else {
+                    showEmptyView();
                 }
             }
 
